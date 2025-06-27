@@ -1,16 +1,11 @@
-// Estende la classe Actor solo per attori di tipo "personaggio"
 class MyD6Actor extends Actor {
   prepareData() {
     super.prepareData();
-
-    // Applica solo agli attori di tipo "personaggio"
     if (this.type !== "personaggio") return;
 
     const data = this.system;
 
-    // Imposta valori base
     data.eta = Math.max(data.eta ?? 18, 18);
-
     data.abilita = {
       soldi: Math.min(data.abilita?.soldi ?? 0, 3),
       sangueFreddo: Math.min(data.abilita?.sangueFreddo ?? 0, 3),
@@ -20,7 +15,6 @@ class MyD6Actor extends Actor {
     };
   }
 
-  // Tiro di abilità
   rollAbilita(tipo) {
     const val = this.system.abilita[tipo] || 0;
     const formula = `${val}d6`;
@@ -33,18 +27,14 @@ class MyD6Actor extends Actor {
   }
 }
 
-// Registrazione del tipo di attore personalizzato "personaggio"
 Hooks.once("init", () => {
   console.log("The Project | Inizializzazione");
 
-  // Estende solo il tipo "personaggio" con MyD6Actor
-  CONFIG.Actor.documentClass = class extends MyD6Actor {
-    static get type() {
-      return "personaggio";
-    }
-  };
+  // Associa solo il tipo "personaggio" a MyD6Actor
+  CONFIG.Actor.documentClasses ??= {};
+  CONFIG.Actor.documentClasses["personaggio"] = MyD6Actor;
 
-  // Pre-carica il template HTML della scheda
+  // Registra la scheda personalizzata
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("the-project", class extends ActorSheet {
     static get defaultOptions() {
@@ -58,8 +48,7 @@ Hooks.once("init", () => {
   }, { types: ["personaggio"], makeDefault: true });
 });
 
-// Listener per i tiri dalle schede
-Hooks.on("renderActorSheet", (app, html, data) => {
+Hooks.on("renderActorSheet", (app, html) => {
   html.find("button[data-abilita]").click(ev => {
     const abilita = ev.currentTarget.dataset.abilita;
     app.actor.rollAbilita(abilita);
