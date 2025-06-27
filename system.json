@@ -9,6 +9,9 @@
   "styles": ["styles/style.css"],
   "languages": [{ "lang": "it", "name": "Italiano", "path": "lang/it.json" }],
   "actors": ["Actor"],
+  "url": "https://github.com/Treppalle/TheProject",
+  "manifest": "https://raw.githubusercontent.com/Treppalle/TheProject/edit/main/system.json",
+  "download": "https://github.com/Treppalle/TheProject/releases/TheProject.zip",
   "minimumCoreVersion": "13",
   "compatibleCoreVersion": "13"
 }
