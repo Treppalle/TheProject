@@ -19,7 +19,7 @@
   },
   "url": "https://github.com/Treppalle/TheProject",
   "manifest": "https://raw.githubusercontent.com/Treppalle/TheProject/main/system.json",
-  "download": "https://github.com/Treppalle/TheProject/releases/download/v0.1/TheProject.zip",
+  "download": "https://github.com/Treppalle/TheProject/releases/download/0.1/TheProject.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
