@@ -15,7 +15,7 @@
     }
   ],
   "types": {
-    "Actor": ["personaggio"]
+    "Actor": ["personaggio"],
   },
   "actorTypes": ["personaggio"],
   "url": "https://github.com/Treppalle/TheProject",
