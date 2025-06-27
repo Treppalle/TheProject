@@ -1,6 +1,8 @@
-{
-  "name": "base-actors",
-  "label": "Attori di Base",
-  "path": "./packs/base-actors.db",
-  "type": "Actor"
-}
+[
+  {
+    "name": "base-actors",
+    "label": "Attori di Base",
+    "path": "./packs/base-actors.db",
+    "type": "Actor"
+  }
+]
