@@ -1,0 +1,13 @@
+{
+  "name": "the-project",
+  "title": "The Project",
+  "version": "1.0.0",
+  "description": "Sistema GDR personalizzato basato sui D6",
+  "author": "Trepalle",
+  "esmodules": ["module/d6-system.js"],
+  "styles": ["styles/style.css"],
+  "languages": [{ "lang": "it", "name": "Italiano", "path": "lang/it.json" }],
+  "actors": ["Actor"],
+  "minimumCoreVersion": "13",
+  "compatibleCoreVersion": "13"
+}

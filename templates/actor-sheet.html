@@ -1,0 +1,40 @@
+<form>
+  <h2>{{name}}</h2>
+
+  <div class="portrait-section">
+    <img class="portrait" src="{{actor.img}}" data-edit="img" title="{{name}}" />
+  </div>
+
+  <div class="field">
+    <label>Età:
+      <input type="number" name="system.eta" value="{{system.eta}}" min="18" />
+    </label>
+  </div>
+
+  <div class="abilities">
+    <label>Soldi:
+      <input type="number" name="system.abilita.soldi" value="{{system.abilita.soldi}}" min="0" max="3" />
+      <button type="button" data-abilita="soldi">Tira</button>
+    </label><br />
+
+    <label>Sangue Freddo:
+      <input type="number" name="system.abilita.sangueFreddo" value="{{system.abilita.sangueFreddo}}" min="0" max="3" />
+      <button type="button" data-abilita="sangueFreddo">Tira</button>
+    </label><br />
+
+    <label>Abilità Guida:
+      <input type="number" name="system.abilita.guida" value="{{system.abilita.guida}}" min="0" max="3" />
+      <button type="button" data-abilita="guida">Tira</button>
+    </label><br />
+
+    <label>Costituzione:
+      <input type="number" name="system.abilita.costituzione" value="{{system.abilita.costituzione}}" min="1" max="3" />
+      <button type="button" data-abilita="costituzione">Tira</button>
+    </label><br />
+
+    <label>Favori:
+      <input type="number" name="system.abilita.favori" value="{{system.abilita.favori}}" min="0" max="3" />
+      <button type="button" data-abilita="favori">Tira</button>
+    </label>
+  </div>
+</form>
