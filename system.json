@@ -16,7 +16,7 @@
   ],
   "types": {
     "Actor": ["personaggio"],
-  },
+  }
   "actorTypes": ["personaggio"],
   "url": "https://github.com/Treppalle/TheProject",
   "manifest": "https://raw.githubusercontent.com/Treppalle/TheProject/main/system.json",
