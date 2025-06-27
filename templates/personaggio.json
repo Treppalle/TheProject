@@ -1,0 +1,15 @@
+{
+  "type": "personaggio",
+  "name": "",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "eta": 18,
+    "abilita": {
+      "soldi": 0,
+      "sangueFreddo": 0,
+      "guida": 0,
+      "costituzione": 1,
+      "favori": 0
+    }
+  }
+}
